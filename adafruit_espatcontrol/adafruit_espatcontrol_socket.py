@@ -73,6 +73,8 @@ class socket:
                 conntype = "TCP"
             elif port == 443:
                 conntype = "SSL"
+            elif port == 1883:
+                conntype = "TCP"
 
         if not _the_interface.socket_connect(
             conntype, host, port, keepalive=10, retries=3
